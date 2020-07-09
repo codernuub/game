@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <filter id="Subtraction_1" x="-8" y="-2" width="63.999" height="58.001" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-up">
+      <rect width="48" height="48"/>
+    </clipPath>
+  </defs>
+  <g id="up" clip-path="url(#clip-up)">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Subtraction_1)">
+      <path id="Subtraction_1-2" data-name="Subtraction 1" d="M-264.25-165H-270l23-40,23,40-5.749,0L-247-195l-17.25,30Z" transform="translate(271 209)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
