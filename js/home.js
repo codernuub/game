@@ -1,7 +1,6 @@
 function menuToggle() {
   const menu = document.querySelector(".menu");
   const nav = document.querySelector(".nav");
-  console.log(nav.clientHeight);
   menu.classList.toggle("menu-active");
   nav.classList.toggle("nav-active");
 }

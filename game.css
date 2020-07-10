@@ -58,14 +58,12 @@ header > nav > .menu-active > span:nth-child(3) {
 }
 
 header > nav > .game-top {
-  text-align: center;
   width: fit-content;
   display: flex;
   flex-direction: column;
   padding: 10% 2.5%;
 }
 header > nav > .game-top > h1 {
-  text-align: center;
   margin: 0;
   color: white;
   font-size: 10vw;
@@ -237,8 +235,8 @@ section > .games > .game > .game-theme > .game-icon > img {
 
 /*game card lower part*/
 section > .games > .game > .game-content {
-  width: 90%;
-  padding: 0 5% 5%;
+  width: 85%;
+  padding:2.5% 7.5%;
   background-color: #1f2429;
 }
 section > .games > .game > .game-content > h4 {
@@ -300,8 +298,8 @@ section > .activeUP {
 }
 
 footer {
-  width: 90%;
-  padding: 5%;
+  width: 95%;
+  padding:2.5%;
   background-color: #1f2429;
   text-align: center;
 }
@@ -332,14 +330,14 @@ footer > span {
     display: none;
   }
   header > nav > .game-top {
-    padding: 5% 0;
+    padding:3% 0;
   }
   header > nav > .game-top > h1 {
-    font-size: 8vw;
+    font-size:6vw;
   }
   header > nav > .game-top > h3 {
     text-align: right;
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   /*header navbar*/
@@ -347,7 +345,7 @@ footer > span {
     height: auto;
   }
   header > .nav > ul {
-    width: 70%;
+    width:60%;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -355,7 +353,7 @@ footer > span {
   }
 
   header > .nav > ul > li {
-    font-size: 3vw;
+    font-size:2vw;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -395,8 +393,8 @@ footer > span {
 
   /**games*/
   section > .games {
-    width: 80%;
-    margin: auto 10%;
+    width:70%;
+    margin: auto 15%;
     flex-direction: row;
   }
 
@@ -440,12 +438,17 @@ footer > span {
     display: none;
   }
 
+  header > nav > .game-top {
+    width: fit-content;
+    padding:2% 0;
+  }
+
   header > nav > .game-top > h1 {
-    font-size: 5vw;
+    width: fit-content;
+    font-size:3.5vw;
   }
   header > nav > .game-top > h3 {
-    text-align: right;
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 
   header > .nav {
@@ -453,11 +456,14 @@ footer > span {
   }
 
   header > .nav > ul > li {
-    font-size: 2vw;
+    font-size:1.5vw;
   }
   /*games*/
+  section > .message-content {
+    padding:2% 5%; 
+  }
   section > .message-content > h1 {
-    font-size: 3vw;
+    font-size:2.5vw;
   }
   section > .message-content > span {
     font-size: 2vw;
@@ -465,8 +471,8 @@ footer > span {
 
   /**games*/
   section > .games {
-    width: 80%;
-    margin: auto 10%;
+    width:60%;
+    margin: auto 20%;
     flex-direction: row;
   }
 
@@ -477,10 +483,10 @@ footer > span {
 
   /*game card lower part*/
   section > .games > .game > .game-content > h4 {
-    font-size: 2vw;
+    font-size:1.5vw;
   }
   section > .games > .game > .game-content > p {
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
   /*showup button*/
   section > button {
