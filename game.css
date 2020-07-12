@@ -330,7 +330,7 @@ footer > span {
     display: none;
   }
   header > nav > .game-top {
-    padding:3% 0;
+    padding:1.5% 0;
   }
   header > nav > .game-top > h1 {
     font-size:6vw;
@@ -385,7 +385,7 @@ footer > span {
     margin: 0 15%;
   }
   section > .message-content > h1 {
-    font-size: 5vw;
+    font-size:4vw;
   }
   section > .message-content > span {
     font-size: 3vw;
@@ -440,12 +440,12 @@ footer > span {
 
   header > nav > .game-top {
     width: fit-content;
-    padding:2% 0;
+    padding:0;
   }
 
   header > nav > .game-top > h1 {
     width: fit-content;
-    font-size:3.5vw;
+    font-size:3vw;
   }
   header > nav > .game-top > h3 {
     font-size: 1.5vw;
@@ -463,7 +463,7 @@ footer > span {
     padding:2% 5%; 
   }
   section > .message-content > h1 {
-    font-size:2.5vw;
+    font-size:2vw;
   }
   section > .message-content > span {
     font-size: 2vw;
@@ -471,8 +471,8 @@ footer > span {
 
   /**games*/
   section > .games {
-    width:60%;
-    margin: auto 20%;
+    width:55%;
+    margin: auto 22.5%;
     flex-direction: row;
   }
 
@@ -501,6 +501,6 @@ footer > span {
     font-size: 2vw;
   }
   footer > span {
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
 }
