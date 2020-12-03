@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--icon lib-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="/public/css/home.css" />
+    <!--script-->
+    <script src="/public/js/home.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="profile">
+            <!--
+            <span>
+            <i class="fa fa-user-circle"></i>
+        </span>-->
+            <p>Hello</p>
+            <h3>Abdullah</h3>
+        </div>
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="content">
+        <!--schedule msg-->
+        <div id="schedule" class="section">
+            <div class="info">
+                <h4>Welcome !</h4>
+                <p>Lets schedule your next class.</p>
+                <a><i class="fa fa-plus"></i><span>Add</span></a>
+            </div>
+
+            <img src="/public/assets/coaching.png" />
+        </div>
+
+        <!--ongoing classes-->
+        <div id="ses-sec" class="section">
+            <div class="head">
+                <h4>Scheduled classes</h4>
+                <a onclick="openfullList(event)" id="ses-sec">view all</a>
+            </div>
+            <div class="sessions">
+                <!--block-->
+
+                <div class="session">
+                    <!--heder-->
+                    <div class="head">
+
+                        <h4>BTECH</h4>
+                        <i id="remove" class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="details">
+                        <h5><i class="fa fa-book"></i>&nbsp;&nbsp;CSIT406</h5>
+                        <h5><i class="fas fa-book-open"></i>&nbsp;Functions</h5>
+                    </div>
+                    <div class="time">
+                        <span><i class="fa fa-clock-o"></i></span>
+                        <span>12:56 PM</span>
+                    </div>
+                </div>
+
+                <!--block-->
+                  <!--block-->
+
+                  <div class="session">
+                    <!--heder-->
+                    <div class="head">
+
+                        <h4>BTECH</h4>
+                        <i id="remove" class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="details">
+                        <h5><i class="fa fa-book"></i>&nbsp;&nbsp;CSIT406</h5>
+                        <h5><i class="fas fa-book-open"></i>&nbsp;Functions</h5>
+                    </div>
+                    <div class="time">
+                        <span><i class="fa fa-clock-o"></i></span>
+                        <span>14:00 PM</span>
+                    </div>
+                </div>
+
+                <!--block-->
+                <!--block-->
+
+                <div class="session">
+                    <!--heder-->
+                    <div class="head">
+
+                        <h4>BCA</h4>
+                        <i id="remove" class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="details">
+                        <h5><i class="fa fa-book"></i>&nbsp;&nbsp;MAS206</h5>
+                        <h5><i class="fas fa-book-open"></i>&nbsp;Trignometry</h5>
+                    </div>
+                    <div class="time">
+                        <span><i class="fa fa-clock-o"></i></span>
+                        <span>15:30 PM</span>
+                    </div>
+                </div>
+
+                <!--block-->
+                     <!--block-->
+
+                     <div class="session">
+                        <!--heder-->
+                        <div class="head">
+    
+                            <h4>BCOM</h4>
+                            <i id="remove" class="fa fa-angle-right"></i>
+                        </div>
+                        <div class="details">
+                            <h5><i class="fa fa-book"></i>&nbsp;&nbsp;HIND89</h5>
+                            <h5><i class="fas fa-book-open"></i>&nbsp;Kiran Bedi uthi subha</h5>
+                        </div>
+                        <div class="time">
+                            <span><i class="fa fa-clock-o"></i></span>
+                            <span>16:50 PM</span>
+                        </div>
+                    </div>
+    
+                    <!--block-->
+
+            </div>
+        </div>
+        <!--subjects-->
+        <div id="sub-sec" class="section">
+            <div class="head">
+            <h4>Your subjects</h4>
+            <a onclick="openfullList(event)" id="sub-sec">view all</a>
+        </div>
+            <div class="subjects">
+
+                <!--block-->
+                <div class="subject">
+                    <h3>Mathmetics</h3>
+                    <p>BCA</p>
+                    <div class="details">
+                        <h5><i class="fa fa-book"></i>&nbsp;&nbsp;Chapters 15</h5>
+                        <h5><i class="fa fa-user"></i>&nbsp;&nbsp;Students 50+</h5>
+                    </div>
+                    <div class="progress">
+                        <div>
+                            <h5>Syllabus completed</h5>
+                            <span>67%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="pg"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--blokc-->
+                  <!--block-->
+                  <div class="subject">
+                    <h3>Moral Value</h3>
+                    <p>BCOM</p>
+                    <div class="details">
+                        <h5><i class="fa fa-book"></i>&nbsp;&nbsp;Chapters 15</h5>
+                        <h5><i class="fa fa-user"></i>&nbsp;&nbsp;Students 50+</h5>
+                    </div>
+                    <div class="progress">
+                        <div>
+                            <h5>Syllabus completed</h5>
+                            <span>30%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="pg"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--blokc-->
+                 <!--block-->
+                 <div class="subject">
+                    <h3>Mathmetics Utlre pro</h3>
+                    <p>BCA</p>
+                    <div class="details">
+                        <h5><i class="fa fa-book"></i>&nbsp;&nbsp;Chapters 15</h5>
+                        <h5><i class="fa fa-user"></i>&nbsp;&nbsp;Students 50+</h5>
+                    </div>
+                    <div class="progress">
+                        <div>
+                            <h5>Syllabus completed</h5>
+                            <span>79%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="pg"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--blokc-->
+                      <!--block-->
+                      <div class="subject">
+                        <h3>Mathmetics Utlre pro</h3>
+                        <p>BCA</p>
+                        <div class="details">
+                            <h5><i class="fa fa-book"></i>&nbsp;&nbsp;Chapters 15</h5>
+                            <h5><i class="fa fa-user"></i>&nbsp;&nbsp;Students 50+</h5>
+                        </div>
+                        <div class="progress">
+                            <div>
+                                <h5>Syllabus completed</h5>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="pg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--blokc-->
+            </div>
+        </div>
+    </div>
+   
+</body>
+
+</html>
