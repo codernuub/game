@@ -1,0 +1,365 @@
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+
+/*message styling start*/
+.msg-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  padding: 0;
+  transform: translateY(-100%);
+  background-color: white;
+  border-top: 1px solid #eee;
+  margin: 0;
+  transition: all 0.4s;
+}
+.msg-block-close {
+  transform: translate(0);
+}
+.msg-block > h4 {
+  margin: 2.5% 5%;
+}
+.msg-block > .msg {
+  flex: 1;
+  width: 95%;
+  padding: 2.5%;
+  padding-top:0;
+  overflow-y: scroll;
+}
+.msg-block > .msg::-webkit-scrollbar {
+  display: none;
+}
+.msg-block > .msg > .text {
+  width: fit-content;
+  max-width: 60%;
+  padding: 2.5%;
+  padding-top: 0;
+}
+.msg-block > .msg > .tutor {
+  margin-right: 0;
+  margin-left: auto;
+  padding: 2.5%;
+  background-color: #eee;
+  border-radius: 5px;
+}
+.msg-block > .msg > .text > span {
+  color: grey;
+  font-size: 0.8rem;
+}
+.msg-block > .msg > .text > p {
+  margin: 1.5% 0 0 0;
+  color: #1b1b1b;
+  font-size: 0.9rem;
+}
+
+.msg-block > form {
+  display: flex;
+  font-size: 0.9rem;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+.msg-block > form > input {
+  width: 95%;
+  padding: 3.5% 2.5%;
+  border: transparent;
+}
+.msg-block > form > button {
+  color: white;
+  width: 20%;
+  background-color: #6593f5;
+  border: transparent;
+}
+/*message styling ends*/
+
+/*navigaion styling start*/
+.nav > .bg {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #6393f5;
+  z-index: -1;
+  transition: all 0.2s;
+}
+.nav {
+  position: relative;
+  text-align: center;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.08),
+    -1px -1px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.nav > li {
+  padding: 0;
+  font-size: 0.9rem;
+  transition: all 0.4s;
+}
+.nav > li > i {
+  width: 100%;
+  margin: 12px 0;
+}
+/*navigaion styling ends*/
+.main-content {
+  display: flex;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+}
+.video-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40%;
+}
+.video-block > video {
+  flex: 1;
+  width: 100%;
+  background-color: grey;
+  padding: 0;
+}
+/*content styling sart*/
+.content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+/*section default styling start*/
+.section {
+  display: flex;
+  flex-direction: column;
+  min-width: 90%;
+  height: 90%;
+  margin: 5%;
+  transition: all 0.2s;
+}
+.section > h4 {
+  margin-top: 0;
+  font-weight: lighter;
+}
+
+.section > .sessions {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  justify-content: space-between;
+}
+.section > .sessions::-webkit-scrollbar {
+  display: none;
+}
+.section > .no-sessions {
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  padding: 5% 0;
+  text-align: center;
+  background-color: #eee;
+}
+
+.section > .no-sessions > p {
+  color: grey;
+  margin: 0;
+}
+.section > .no-sessions > a {
+  color: #6393f5;
+}
+/*section default styling end*/
+
+/*popup styling start*/
+.popup {
+  display: flex;
+  width:100%;
+  height:100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #1b1b1b2a;
+}
+.close-popup {
+  display: none;
+  overflow: hidden;
+}
+.popup > div {
+  text-align: center;
+  width:70%;
+  padding:5%;
+  max-width:350px;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+.popup > div > h4 {
+  margin: 0;
+}
+.popup > div > .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width:100%;
+}
+.popup > div > .buttons > button {
+  border:transparent;
+  background-color: #6393f5;
+  color: white;
+  width:100%;
+  padding:3%;
+  border-radius: 5px;
+}
+.popup > div > .buttons > button:nth-child(2) {
+  margin-top:5%;
+  background-color: #f44336;
+}
+/*popup styling end*/
+.s1 {
+  margin-left: 100%;
+}
+
+/*students section styling*/
+.s1 > .students > .student {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 40% 45%;
+  border: 1px solid #eee;
+  padding: 0%;
+}
+.s1 > .students >  .ban {
+  background-color: #eee;
+}
+.s1 > .students > .student > #profile {
+  display: block;
+  margin: auto;
+  color: grey;
+}
+.s1 > .students > .student > div {
+  padding: 2.5%;
+  margin: 0;
+}
+.s1 > .students > .student > div > h4 {
+  margin: 2.5% 0;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+.s1 > .students > .student > div > h5 {
+  margin: 2.5% 0;
+  color: grey;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+.s1 > .students > .student > span:nth-child(3) {
+  text-align: center;
+  display:grid;
+  grid-template-columns:50% 50%;
+  width: 100%;
+  margin: auto 0;
+  color: grey;
+}
+
+/*info sections*/
+.s2 > h3 {
+  margin:0;
+}
+.s2 > h4 {
+  color:grey;
+}
+.s2 > .subDetail {
+list-style: none;
+width: 90%;
+margin: 0;
+padding: 5%;
+border-radius: 5px;
+background-color: #eee;
+margin: 5% 0;
+margin-top: 0;
+}
+.s2 > .subDetail > li > h5 {
+color: grey;
+margin: 0;
+}
+.s2 > .subDetail > li > p {
+margin: 2.5% 0;
+color:#2c393f;
+font-size: 1rem;
+}
+.s2 > .subDetail > li:nth-child(2) {
+  margin-top: 2.5%;
+}
+.s2 > .subDetail > li:nth-child(2) > p {
+margin-bottom: 0;
+}
+
+.s2 > .description {
+  display: block;
+  padding-top:2.5%;
+}
+.s2 > .description > h4 {
+color: #2c393f;
+margin: 0;
+}
+.s2 > .description > p {
+font-size: 1rem;
+margin:0;
+color: grey;
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    display: flex;
+  }
+  .main-content {
+    width: 60%;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .video-block {
+    height: 50%;
+  }
+  .section {
+    margin-top: 2.5%;
+  }
+  /*students styling*/
+  .s1 {
+    margin-left: 5%;
+  }
+  .s1 > .students {
+    display: flex;
+
+  }
+  .s1 > .students > .student {
+    width:47%;
+    margin:0;
+  }
+  /*messge styling*/
+
+  .msg-block {
+    width: 40%;
+    height: 100%;
+    transform: translateY(0);
+    /*box-shadow: -2px 0 20px rgba(0, 0, 0, 0.08);*/
+    border-left: 1px solid #eee;
+    background-color: #fff;
+  }
+}

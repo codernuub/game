@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--icon lib-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--css-->
+    <link rel="stylesheet" href="/css/schedule.css" />
+    <!--script-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="/home"><i class="fa fa-angle-left"></i>&nbsp;back</a>
+    </header>
+
+    <form>
+      <p>Schedule your next class</p>
+      <select required>
+        <option value="">Select Course</option>
+      </select>
+      <select required>
+        <option value="">Select Subject</option>
+      </select>
+      <select required>
+        <option value="">Select Chapters</option>
+      </select>
+      <select required>
+        <option value="">Select Excercise</option>
+      </select>
+      <textarea placeholder="Enter class description"></textarea>
+
+      <label>Time</label>
+      <input type="time" required />
+
+      <button>create</button>
+    </form>
+  </body>
+</html>

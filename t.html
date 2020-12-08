@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+   <input type="tim">
+    <a id="myDIv" onclick="myFunc()">
+        Enroll Now
+    </a>
+</body>
+<script>
+    function myFunc() {
+        const a = document.querySelector('#myDiv');
+            a.style.backgroundColor = 'green';
+            a.style.color = 'white';
+            a.textContent = 'Thank You';
+            //a.setAttribute('href', '');
+    
+    }
+  
+</script>
+<style>
+
+#myDiv {
+    display: inline-block;
+    padding:2.5%;
+    border: 1px solid #eee;
+    border-radius:5px;
+    margin: 2.5%;
+}
+</style>
+
+</html>

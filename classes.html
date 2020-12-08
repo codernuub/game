@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--icon lib-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="/public/css/classes.css" />
+    <!--js-->
+    <script defer src="/public/js/classes.js"></script>
+</head>
+
+<body>
+
+    <div class="loader">
+
+        <div class="l">
+          <div class="loader-box"></div>
+          <div class="loader-box"></div>
+        </div>
+        <h4 class="state">Fetching Data</h4>
+      </div>
+
+    <header>
+        <div>
+            <a href="/home"><i class="fa fa-angle-left"></i>&nbsp;back</a>
+            <h3>Scheduled classes</h3>
+        </div>
+        <img src="/public/assets/coaching.png">
+    </header>
+
+ 
+
+    <div class="content">
+
+        <div class="section upcoming s1">
+            <h4><i class="fa fa-clock-o"></i>&nbsp;upcoming classes</h4>
+            <div class="sessions upcoming no-sessions">
+               <p>You have not schedule any class</p>
+               <a href="/home/schedule">create</a>
+            </div>
+        </div>
+
+        <div class="section completed s2">
+            <h4><i class="fa fa-check"></i>&nbsp;completed classes</h4>
+            <div class="sessions completed no-sessions">
+                <p>You didn't take any classes.</p>
+            </div>
+        </div>
+
+        <div class="section canceled s3">
+            <h4><i class="fa fa-remove"></i>&nbsp;canceled classes</h4>
+            <div class="sessions canceled no-sessions">
+                <p>No classes canceled.</p>
+            </div>
+        </div>
+
+    </div>
+    <ul class="nav">
+        <li id="0">
+            <i class="fa fa-clock-o"></i>&nbsp;upcoming
+        </li>
+        <li id="1"><i class="fa fa-check"></i>&nbsp;completed</l id="s2" i>
+        <li id="2"><i class="fa fa-remove"></i>&nbsp;canceled</li>
+        <div class="bg"></div>
+    </ul>
+</body>
+
+</html>
