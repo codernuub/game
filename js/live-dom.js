@@ -1,23 +1,19 @@
 const nav = document.querySelector(".nav");
 const popup = document.querySelector('.popup');
-console.log(popup);
-let prev = 0, modal = false, modalType = 'null';
+const [students, info, requests] = document.querySelectorAll('.sessions');
+
+let prev = 0, modal = false, modalType = null;
 
 /*navigation code*/
 function navigateToPage(id) {
     //highlight opened section
     hnleColor(id)
     document.querySelector(".bg").style.marginLeft = 20 * id + "%";
-    if (4 !== id) {
-        //section 
-        if (!prev || !id) handleMessage();
-        let m = 0 ? 0 : 5 - 100 * (id - 1);
-        document.querySelector(".s1").style.marginLeft = m + "%";
-    } else {
 
-        showPopup({ head: 'End session', type: 'end', data: null, func:'endSession'});
-        modal = true;
-    }
+    //section 
+    if (!prev || !id) handleMessage();
+    let m = 0 ? 0 : 5 - 100 * (id - 1);
+    document.querySelector(".s1").style.marginLeft = m + "%";
     prev = id;
 }
 
@@ -67,7 +63,7 @@ function studentHtmlStr({ id, name, ban }) {
 }
 
 //modal html template
-function modalHtmlStr({ head, type, data, func}) {
+function modalHtmlStr({ head, type, data, func }) {
     return ` <div>
     <h4>${head}</h4>
     <p class="popup-msg">Are you sure you want to ${type} ${data || 'this session'} ?</p>
@@ -78,6 +74,11 @@ function modalHtmlStr({ head, type, data, func}) {
 </div>`
 };
 
+//request html temp
+function reqHtmlTemplate(name) {
+
+}
+
 
 /**********************LIB FUNCTIONS**************************/
 function stringToHtml(htmlStr) {
@@ -85,6 +86,9 @@ function stringToHtml(htmlStr) {
     return doc.parseFromString(htmlStr, 'text/html').body.children[0]
 }
 
+function killChild(parentId, childId) {
+
+}
 
 /**********************manage room data in DOM**************************/
 function buildStudents(students) {
@@ -94,8 +98,21 @@ function buildStudents(students) {
     })
 }
 
+function kickStudent() {
+
+}
+
+function banStudent() {
+    console.log("student banned");
+}
+
+function rejectRequest() {
+
+}
+function acceptRequest() {
+
+}
 function endSession() {
-    console.log('session ended');
     closePopup();
 }
 
@@ -104,7 +121,14 @@ function endSession() {
 nav.addEventListener("click", (e) => {
     const id = Number.parseInt(e.target.id);
     if (modal) return;
-    if (e.target.id && prev !== id) navigateToPage(id);
+    if (e.target.id && prev !== id) {
+        if (id !== 4) {
+            navigateToPage(id);
+        } else {
+            showPopup({ head: 'End session', type: 'end', data: null, func: 'endSession' });
+            modal = true;
+        }
+    }
 });
 
 //message
