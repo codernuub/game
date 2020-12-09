@@ -155,7 +155,7 @@ body {
 }
 .section > h4 {
   margin-top: 0;
-  font-weight: lighter;
+  font-weight:500;
 }
 
 .section > .sessions {
@@ -382,6 +382,10 @@ color: grey;
   }
   .section {
     margin-top: 2.5%;
+  }
+  /*nv*/
+  .nav > .bg {
+    margin-left: 20%;
   }
   /*students styling*/
   .s1 {

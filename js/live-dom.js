@@ -1,10 +1,27 @@
 const nav = document.querySelector(".nav");
+const form = document.querySelector("form");
 const popup = document.querySelector('.popup');
-const [students, info, requests] = document.querySelectorAll('.sessions');
+const [students, requests] = document.querySelectorAll('.sessions');
+let prev = window.innerWidth >= 900 ? 1 : 0, modal = false;
 
-let prev = 0, modal = false, modalType = null;
+/**********************LIB FUNCTIONS**************************/
+function stringToHtml(htmlStr) {
+    const doc = new DOMParser();
+    return doc.parseFromString(htmlStr, 'text/html').body.children[0]
+}
 
-/*navigation code*/
+function handleEmptySection(element, len, msg) {
+    element.classList.toggle('no-sessions');
+    element.innerHTML = msg ? `<p>${msg}</p>` : '';
+}
+
+function killChild(parent, childId) {
+    parent.removeChild(parent.querySelector(`#s${childId}`))
+}
+
+
+/**********************NAV CODE**************************/
+hnleColor(prev);
 function navigateToPage(id) {
     //highlight opened section
     hnleColor(id)
@@ -26,95 +43,62 @@ function handleMessage() {
     document.querySelector('.msg-block').classList.toggle('msg-block-close');
 }
 
-/**********************POPUP FUNCTIONS*************************/
 
+/**********************POPUP FUNCTIONS*************************/
 function showPopup(data) {
-    const htmlStr = modalHtmlStr(data);
+    const htmlStr = modalHtmlTemp(data);
     popup.appendChild(stringToHtml(htmlStr));
     popup.classList.remove('close-popup');
     modal = true;
-    modalType = data['type'];
 }
 
 function closePopup() {
     popup.classList.add('close-popup');
     popup.innerHTML = "";
     modal = false;
-    modalType = null;
 }
 
-/**********************HTML Templates**************************/
-//student html template
-function studentHtmlStr({ id, name, ban }) {
-    return `<div id=${id} class="student ${ban ? 'ban' : ''}">
-        <span id="profile">
-        <i class="fa fa-user"></i>
-        </span>
-        <div>
-            <h4>${name}</h4>
-            <h5>${id}</h5>
-        </div>
-        
-        <span>
-            <i class="fa fa-${ban ? 'ban' : 'circle-blank'}">${ban ? '' : '&nbsp;ban'}</i>
-            <i style="color: #f44336;font-weight:600" class="fas fa-sign-out-alt">&nbsp;kick</i>
-        </span>
-    </div>`;
-}
-
-//modal html template
-function modalHtmlStr({ head, type, data, func }) {
-    return ` <div>
-    <h4>${head}</h4>
-    <p class="popup-msg">Are you sure you want to ${type} ${data || 'this session'} ?</p>
-    <div class="buttons">
-        <button onclick="closePopup()">No</button>
-        <button onclick="${func}()">Yes</button>
-    </div>
-</div>`
-};
-
-//request html temp
-function reqHtmlTemplate(name) {
-
-}
-
-
-/**********************LIB FUNCTIONS**************************/
-function stringToHtml(htmlStr) {
-    const doc = new DOMParser();
-    return doc.parseFromString(htmlStr, 'text/html').body.children[0]
-}
-
-function killChild(parentId, childId) {
-
-}
 
 /**********************manage room data in DOM**************************/
-function buildStudents(students) {
-    const stuEl = document.querySelector('.students');
-    students.forEach(student => {
-        stuEl.appendChild(stringToHtml(studentHtmlStr(student)))
+function buildData(parent, data, template) {
+    handleEmptySection(parent, true, null);
+    data.forEach(d => {
+        const child = stringToHtml(template(d))
+        parent.appendChild(child)
+    })
+}
+//handle kick or ban request
+function manageStudent(event) {
+    const action = event.target.id || null;
+    if(!action) return;
+    showPopup({
+        head: `${action} student`,
+        type: action,
+        data: event.path[1].className,
+        func: `${action}Student`
     })
 }
 
-function kickStudent() {
-
+/*socket related functions*/
+function kickStudent(event) {
+    console.log("kicked " + event.target.id);
+    killChild(students, event.target.id);
+    closePopup();
 }
-
-function banStudent() {
-    console.log("student banned");
+function banStudent(event) {
+    console.log("banned " + event.target.id);
+    closePopup();
 }
-
 function rejectRequest() {
-
+    console.log('request rejected');
 }
 function acceptRequest() {
-
+    console.log('request accepted');
 }
 function endSession() {
     closePopup();
 }
+/*socket related functions*/
 
 /**********************Event LISTENERS**************************/
 //navigation
@@ -126,7 +110,6 @@ nav.addEventListener("click", (e) => {
             navigateToPage(id);
         } else {
             showPopup({ head: 'End session', type: 'end', data: null, func: 'endSession' });
-            modal = true;
         }
     }
 });
@@ -143,5 +126,14 @@ const stu = [
     { id: '19BCA029', name: 'Prashant' },
     { id: '19BCA043', name: 'Aamish' }
 ]
+const reqs = [
+    { id: '19BCA031', name: 'Ayush Kumar' },
+    { id: '19BCA028', name: 'Azhar' },
+    { id: '19BCA041', name: 'Abhinav Bright' },
+    { id: '19BCA028', name: 'Mohammed Shakir' },
+    { id: '19BCA029', name: 'Prashant' },
+    { id: '19BCA043', name: 'Aamish' }
+]
 
-buildStudents(stu)
+buildData(students, stu, studentHtmlTemp);
+buildData(requests, reqs, reqHtmlTemp)

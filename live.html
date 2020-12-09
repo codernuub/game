@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/live.css">
     <!--icon lib-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script defer src="js/live-temp.js"></script>
     <script defer src="js/live-dom.js"></script>
     <script defer src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -17,7 +18,7 @@
         <div class="video-block">
             <video width="100%"></video>
             <ul class="nav">
-                <li id="0" style="color:white;"><i id="0" class="fa fa-envelope"></i></li>
+                <li id="0"><i id="0" class="fa fa-envelope"></i></li>
                 <li id="1"><i id="1" class="fa fa-users"></i></li>
                 <li id="2"><i id=2 class="fa fa-info"></i></li>
                 <li id="3"><i id=3 class="fa fa-user-plus"></i></li>
@@ -33,7 +34,9 @@
             <!--students section .no-sessions <p>No students joined</p>-->
             <div class="section s1">
                 <h4>Students</h4>
-                <div class="sessions students"></div>
+                <div class="sessions students no-sessions">
+                    <p>No students joined</p>
+                </div>
             </div>
             <!--Info section-->
             <div class="section info s2">
@@ -58,22 +61,9 @@
             <!--request section   <p>No new join request</p>-->
             <div class="section s3">
                 <h4>Join requests</h4>
-                <div class="sessions requests sessions">
+                 <div class="sessions requests no-sessions">
 
-                    <div class="request">
-                        <span id="profile">
-                        <i class="fa fa-user"></i>
-                        </span>
-                        <div>
-                            <h4>Md. Abdullah khan</h4>
-                            <h5>19BCA013</h5>
-                        </div>
-                        
-                        <span>
-                            <i style="color: #f44336;" class="fa fa-remove"></i>
-                            <i style="color: green;" class="fas fa-check"></i>
-                        </span>
-                    </div>
+                   <p>No new join request</p>
 
                 </div>
             </div>
@@ -110,7 +100,6 @@
                 <span><i class="fa fa-user"></i>&nbsp;Abhinav</span>
                 <p>Sir ek doubt hai raat me good morning kahe krre?</p>
             </div>
-
 
         </div>
 
